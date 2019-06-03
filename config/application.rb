@@ -17,5 +17,6 @@ module Proto
     # the framework and any gems in your application.
     
     config.sass.preferred_syntax = :sass
+    config.app_generators.scaffold_controller :responders_controller
   end
 end

@@ -1,8 +1,13 @@
 require: rubocop-rails
 
+Layout/AlignHash:
+  Exclude:
+    - config/initializers/simple_form_bootstrap.rb
+
 Metrics/BlockLength:
   Exclude:
     - Guardfile
+    - config/initializers/simple_form_bootstrap.rb
 
 Metrics/LineLength:
   Exclude:
@@ -11,6 +16,7 @@ Metrics/LineLength:
     - bin/rails
     - bin/spring
     - config/initializers/content_security_policy.rb
+    - config/initializers/simple_form*.rb
 
 AllCops:
   Exclude:

@@ -1,1 +1,27 @@
 require: rubocop-rails
+
+Metrics/BlockLength:
+  Exclude:
+    - Guardfile
+
+Metrics/LineLength:
+  Exclude:
+    - bin/setup
+    - bin/rake
+    - bin/rails
+    - bin/spring
+    - config/initializers/content_security_policy.rb
+
+AllCops:
+  Exclude:
+    - bin/bundle
+    - bin/webpack-dev-server
+    - bin/webpack
+    - bin/yarn
+    - node_modules/node-sass/src/libsass/*
+    - node_modules/node-sass/src/libsass/**/*
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb
+Style/Documentation:
+  Enabled: false

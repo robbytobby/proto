@@ -7,8 +7,6 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc1'
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3', '~> 1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -38,18 +36,20 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'responders'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Call 'byebug' anywhere in the code to stop execution
+  # and get a debugger console
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'rubocop-rails', require: false
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  # Access an interactive console on exception pages or by
+  # calling 'console' anywhere in the code.
   gem 'guard'
   gem 'guard-bundler', require: false
-  gem 'guard-rubocop'
   gem 'guard-rspec', require: false
+  gem 'guard-rubocop'
   gem 'guard-spring'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
@@ -66,4 +66,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
